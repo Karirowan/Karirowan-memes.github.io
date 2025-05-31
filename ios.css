@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Включаем режим Flexbox */
+  flex-direction: column; /* Вертикальное направление */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  background-color: #3e1171;
+  background-image: url('fon.jpg'); /* Путь к изображению */
+  background-repeat: no-repeat;                     /* Изображение не повторяется */
+  background-position: center center;               /* Позиция изображения по центру */
+  background-attachment: fixed;                    /* Фиксирует фон относительно окна браузера */
+  background-size: cover;                          /* Масштабирует изображение, чтобы покрыть всю область экрана */
+}
+
+#random-image-section {
+  position: relative;
+  text-align: center; /* Центральное выравнивание текста и кнопок */
+}
+
+#random-image-btn {
+  padding: 50px 70px;
+  font-size: 36px;
+  color: rgb(26, 3, 47);
+  background-color: #c9abde;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  justify-content: center;      /* Центрируем по горизонтали */
+  margin-top: 50px; /* Верхний отступ от края страницы */
+  border-radius: 5px; /* Закруглённые углы */
+}
+
+#random-image-btn:hover {
+  background-color: #e5dcf8;
+  justify-content: center;      /* Центрируем  по горизонтали */
+}
+
+#random-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;      /* Центрируем картинки по горизонтали */
+}
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(217, 187, 244);
+  background-color: #7637aa;
+  border-radius: 5px;
+  transition: background-color 0.1s ease-in-out;
+  margin: 50px 10px; /* Отступ сверху и снизу = 50px, слева и справа = 10px */
+}
+        
+.button:hover {
+  background-color: #0056b3;
+
+}
+
+
+.image-mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Гибкость колонок */
+  grid-auto-rows: minmax(min-content, max-content); /* Нет ограничений по высоте */
+  gap: 10px; /* Интервал между изображениями */
+  padding: 20px; /* Отступы вокруг */
+}
+
+.image-mosaic img {
+  width: 100%; /* Полная ширина клетки */
+  height: auto; /* Автовыбор высоты */
+  border-radius: 5px; /* Закруглённые углы */
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.7), 0 0px 30px rgba(0, 0, 0, 1.0); /* Эффект тени */
+  transition: transform 0.1s ease-in-out; /* Анимация при наведении */
+}
+
+/* Наводим мышью — увеличим чуть-чуть */
+.image-mosaic img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Адаптивность */
+@media only screen and (max-width: 768px) {
+  .image-mosaic {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Уменьшаем размер на мобильных */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .image-mosaic {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Mini-версия */
+  }
+}
