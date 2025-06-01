@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Список изображений
   
- const images = Array.from({ length: 70 }, (_, index) => `mood/mood${index + 1}.jpg`);
+ const images = Array.from({ length: 89 }, (_, index) => `mood/mood${index + 1}.jpg`);
 console.log(images);
 
 
