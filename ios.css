@@ -1,11 +1,15 @@
 body {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3e1171;
+  overflow-y: scroll; /* Нужна для корректной прокрутки */
 }
 
+/* Специфичный слой фона */
 .bg-layer {
   position: fixed;
   top: 0;
@@ -16,25 +20,18 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  z-index: -1;
-  touch-action: none; /* предотвращение реакции на касания */
-  will-change: transform;
-  backface-visibility: hidden;
-  perspective: 1000px;
+  z-index: -1; /* Расположен за основным контентом */
 }
 
-@supports ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {
-  .bg-layer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+/* Общий контейнер для элементов */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Горизонтальное центрирование */
+  justify-content: center; /* Вертикальное центрирование */
+  height: 100vh; /* Контейнер занимает всю высоту окна браузера */
 }
+
 
 #random-image-section {
   position: relative;
