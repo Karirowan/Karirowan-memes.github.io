@@ -1,16 +1,39 @@
 body {
-  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
-  display: flex; /* Включаем режим Flexbox */
-  flex-direction: column; /* Вертикальное направление */
-  align-items: center; /* Центрируем элементы по горизонтали */
-  background-color: #3e1171;
-  background-image: url('fon.jpg'); /* Путь к изображению */
-  background-repeat: no-repeat;                     /* Изображение не повторяется */
-  background-position: center center;               /* Позиция изображения по центру */
-  background-attachment: fixed;                    /* Фиксирует фон относительно окна браузера */
-  background-size: cover;                          /* Масштабирует изображение, чтобы покрыть всю область экрана */
+}
+
+.bg-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('fon.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  touch-action: none; /* предотвращение реакции на касания */
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@supports ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {
+  .bg-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 #random-image-section {
@@ -93,7 +116,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 380px) {
   .image-mosaic {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Mini-версия */
   }
