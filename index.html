@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+
+<link rel="icon" href="favicon-96x96.png" type="image/png" />
+  
+<title>Вместо сессии с психологом</title>
+
+  <link rel="stylesheet" href="ios.css">
+</head>
+
+<body>
+  <!-- Слой фона -->
+  <div class="bg-layer"></div>
+
+  <button id="random-image-btn">Какой ты сегодня мем?</button>
+  <br><br>
+  <img id="random-image" style="display:none;" alt="Ваше настроение">
+
+
+    <title>Кнопка перехода</title>
+</head>
+<body>
+    <!-- Кнопка -->
+    <a href="https://t.me/clotArt" class="button">Легендарные юморэски</a>
+</body>
+</html>
+
+
+
+  <title>Моя галерея изображений</title>
+</head>   
+<body>  
+  <div class="image-mosaic" id="image-gallery"></div>
+
+  <script>
+    const gallery = document.getElementById('image-gallery');
+
+    for (let i = 1; i <= 116; i++) {
+      const img = document.createElement('img');
+      img.src = `wall/wall${i}.jpg`;
+      gallery.appendChild(img);
+    }
+  </script>
+
+
+
+<script src="js.js"></script>
+
+</body>
+</html>
