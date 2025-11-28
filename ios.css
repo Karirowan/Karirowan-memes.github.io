@@ -16,7 +16,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('fon2.gif');
+  background-image: url('fon4.gif');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -109,6 +109,31 @@ body {
   background-color: #c575e8;
   transform: scale(1.05);
 
+}
+
+/* Кнопка 3 — как кнопка 2, но другой оттенок */
+.statham-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(60, 22, 93);
+  background-color: #f1caf9;
+  border-radius: 5px;
+  transition: background-color 0.1s ease-in-out;
+  border: none;      /* убираем стандартную рамку */
+  outline: none;     /* убираем рамку при фокусе */
+  margin: 50px 10px; /* Отступ сверху и снизу = 50px, слева и справа = 10px */
+ box-shadow: 0 0 10px rgba(203, 80, 255, 0.7),
+              0 0 20px rgba(188, 80, 255, 0.5);
+  animation: glow-pulse 2s infinite ease-in-out;
+  transition: transform 0.2s ease;
+   cursor: pointer; /* Курсор "рука" при наведении */
+}
+
+.statham-button:hover {
+  background-color: #c575e8; /* слегка меняется при наведении */
+  transform: scale(1.05);
 }
 
 
