@@ -48,7 +48,6 @@ const stathamBtn = document.getElementById("statham-btn");
     'wall/wall128.jpg',
     'wall/wall129.jpg',
     'wall/wall130.jpg',
-    
     // ... добавь сколько нужно
   ];
 
