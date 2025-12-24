@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // === 2. Кнопка "Какой ты сегодня мем?" ===
-  const moodImages = Array.from({ length: 99 }, (_, i) => `mood/mood${i + 1}.jpg`);
+  const moodImages = Array.from({ length: 105 }, (_, i) => `mood/mood${i + 1}.jpg`);
   const moodButton = document.getElementById("random-image-btn");
   const moodImage = document.getElementById("random-image");
 
@@ -49,6 +49,15 @@ const stathamBtn = document.getElementById("statham-btn");
     'wall/wall128.jpg',
     'wall/wall129.jpg',
     'wall/wall130.jpg',
+    'wall/wall142.jpg',
+    'wall/wall143.jpg',
+    'wall/wall144.jpg',
+    'wall/wall145.jpg',
+    'wall/wall146.jpg',
+    'wall/wall147.jpg',
+    'wall/wall148.jpg',
+    'wall/wall149.jpg',
+    'wall/wall150.jpg',
     // ... добавь сколько нужно
   ];
 
