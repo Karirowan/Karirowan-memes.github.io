@@ -58,6 +58,20 @@ const stathamBtn = document.getElementById("statham-btn");
     'wall/wall148.jpg',
     'wall/wall149.jpg',
     'wall/wall150.jpg',
+    'wall/wall151.jpg',
+    'wall/wall152.jpg', 
+    'wall/wall153.jpg', 
+    'wall/wall154.jpg', 
+    'wall/wall155.jpg', 
+    'wall/wall156.jpg', 
+    'wall/wall157.jpg', 
+    'wall/wall158.jpg', 
+    'wall/wall159.jpg', 
+    'wall/wall160.jpg', 
+    'wall/wall161.jpg', 
+    'wall/wall162.jpg', 
+    'wall/wall163.jpg', 
+    'wall/wall164.jpg',   
     // ... добавь сколько нужно
   ];
 
